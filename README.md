@@ -1,2 +1,2 @@
-#Reviewership
+# Reviewership
 This is probably my favourite project that I've worked on recently. It combines a few passions of mine, video games, web development, and my own opinion. This website is not done as I'm still not sure how best to set up a backend interface that can deal with hosting multiple pages seamlessly and so far everything has just been static HTML which works but making one page different breaks all the other pages. So it stays like this for now until I learn a few things about how to host sites then hopefully I can deploy it to a real website!
