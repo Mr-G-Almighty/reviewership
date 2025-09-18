@@ -1,0 +1,521 @@
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.15;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  background: #000;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+}
+
+header:hover h1 {
+  animation-name: slide-in;
+  animation-duration: 0.5s;
+  animation-delay: 0s;
+}
+
+h1, p {
+  margin: 0;
+}
+
+header h1 {
+  position: relative;
+  margin: 0;
+  padding: 0 25px 0 50px;
+  background: #fff;
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
+  color: #000;
+  transform: skewX(-30deg);
+  line-height: 3em;
+  animation-name: slide-out;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+h1 a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  transform: skewX(30deg);
+}
+
+@keyframes slide-out {
+  from {top: 0px;}
+  to {top: -96px;}
+}
+
+@keyframes slide-in {
+  from {top: -96px;}
+  to {top: 0px;}
+}
+
+#title-splash {
+  width: 100%;
+  height: 75vh;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+}
+
+#title-flex {
+  width: inherit;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 70% 10%;
+  justify-content: center;
+  background: #fff;
+  color: #000;
+  padding: 15px;
+  font-family: 'Poppins';
+}
+
+#series-name {
+  background: linear-gradient(
+      63deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(255, 154, 0, 1) 10%,
+      rgba(208, 222, 33, 1) 20%,
+      rgba(79, 220, 74, 1) 30%,
+      rgba(63, 218, 216, 1) 40%,
+      rgba(47, 201, 226, 1) 50%,
+      rgba(28, 127, 238, 1) 60%,
+      rgba(95, 21, 242, 1) 70%,
+      rgba(186, 12, 248, 1) 80%,
+      rgba(251, 7, 217, 1) 90%,
+      rgba(255, 0, 0, 1) 100%
+  );
+  background-size: 300% 300%;
+  animation: shiny 15s ease infinite;
+  border-radius: 15px;
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+}
+
+@keyframes shiny {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#title-flex h1 {
+  font-size: 85px;
+  font-style: italic;
+}
+
+#title-flex h3 {
+  font-size: 30px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+#series-name {
+  grid-row: span 2;
+}
+
+#series-header {
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+}
+
+#review-title {
+  font-family: 'Righteous', cursive;
+  font-size: 4em;
+}
+
+#review-blurb {
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 2em;
+}
+
+#left-bar {
+  order: 1;
+}
+
+#right-bar {
+  order: 3;
+}
+
+#main-review article {
+  order: 2;
+  width: 50vw;
+}
+
+#left-bar, #right-bar {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 10vw;
+  color: #fff;
+  font-family: 'Poppins';
+  border-radius: 15px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+#right-bar {
+  text-align: right;
+}
+
+#left-bar span, #right-bar span {
+  font-weight: normal;
+  font-size: 15px;
+}
+
+#left-bar p, #right-bar p {
+}
+
+#left-bar span::after, #right-bar span::after {
+  content: "\a";
+  white-space: pre;
+}
+
+
+#main-review {
+  background: url(../img/background.webp);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 35px;
+}
+
+#main-review article p {
+  line-height: 23px;
+}
+
+#main-review figure {
+  margin: 0;
+  max-width: 70%;
+}
+
+.align-right {
+  float: right;
+}
+
+img {
+  border: 1px solid #fff;
+}
+
+#main-review figure img {
+  max-width: 500px;
+}
+
+#main-review figcaption {
+  margin-top: 5px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  text-align: right;
+  font-style: italic;
+}
+
+#main-review p {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#first-para::first-letter {
+  font-size: 2em;
+  line-height: 1;
+  float: left;
+  font-weight: bolder;
+}
+
+#main-review h1, #main-review h2, #main-review h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #fff
+}
+
+#main-review h1 {
+  border-bottom: 1px solid #fff;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+#lighter {
+  font-weight: lighter;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
